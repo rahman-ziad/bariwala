@@ -1,0 +1,45 @@
+
+buildscript {
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.1'
+    }
+}
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace = "com.teamx.bariwala"
+    compileSdkVersion 35
+    ndkVersion "28.0.13004108"
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId = "com.teamx.bariwala"
+        minSdkVersion 23
+        targetSdkVersion 35
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}

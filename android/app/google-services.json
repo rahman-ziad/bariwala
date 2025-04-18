@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "399455247535",
+    "project_id": "bariwala-teamx",
+    "storage_bucket": "bariwala-teamx.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399455247535:android:9b235cc0c2d8a3a878485a",
+        "android_client_info": {
+          "package_name": "com.teamx.bariwala"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCd-9X4UqrExoIiZfPAEf_L3S34scZ2Ngc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

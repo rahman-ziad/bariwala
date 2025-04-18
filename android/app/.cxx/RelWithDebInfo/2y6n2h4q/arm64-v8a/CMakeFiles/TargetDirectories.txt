@@ -1,0 +1,2 @@
+C:/Users/ziadd/AndroidStudioProjects/bariwala/android/app/.cxx/RelWithDebInfo/2y6n2h4q/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/ziadd/AndroidStudioProjects/bariwala/android/app/.cxx/RelWithDebInfo/2y6n2h4q/arm64-v8a/CMakeFiles/rebuild_cache.dir
