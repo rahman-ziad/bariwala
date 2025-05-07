@@ -4,6 +4,8 @@ import 'package:intl/intl.dart';
 import 'kyc_nid_screen.dart';
 
 class KycInfoScreen extends StatefulWidget {
+  const KycInfoScreen({super.key});
+
   @override
   _KycInfoScreenState createState() => _KycInfoScreenState();
 }
@@ -44,7 +46,7 @@ class _KycInfoScreenState extends State<KycInfoScreen> {
         _emailController.text.isEmpty ||
         _dob == null) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Please fill all fields')),
+        const SnackBar(content: Text('Please fill all fields')),
       );
       return;
     }
@@ -71,34 +73,34 @@ class _KycInfoScreenState extends State<KycInfoScreen> {
   Widget build(BuildContext context) {
     final user = _auth.currentUser;
     return Scaffold(
-      appBar: AppBar(title: Text('KYC - Personal Info')),
+      appBar: AppBar(title: const Text('KYC - Personal Info')),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: SingleChildScrollView(
           child: Column(
             children: [
-              LinearProgressIndicator(value: 0.33), // Step 1 of 3
-              SizedBox(height: 16),
+              const LinearProgressIndicator(value: 0.33), // Step 1 of 3
+              const SizedBox(height: 16),
               TextField(
                 controller: _nameController,
                 decoration: InputDecoration(
                   labelText: 'Full Name',
-                  border: OutlineInputBorder(),
+                  border: const OutlineInputBorder(),
                   filled: true,
                   fillColor: Colors.grey[300],
                 ),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               TextField(
                 controller: _professionController,
                 decoration: InputDecoration(
                   labelText: 'Profession',
-                  border: OutlineInputBorder(),
+                  border: const OutlineInputBorder(),
                   filled: true,
                   fillColor: Colors.grey[300],
                 ),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               GestureDetector(
                 onTap: () => _selectDate(context),
                 child: AbsorbPointer(
@@ -108,7 +110,7 @@ class _KycInfoScreenState extends State<KycInfoScreen> {
                     ),
                     decoration: InputDecoration(
                       labelText: 'Date of Birth',
-                      border: OutlineInputBorder(),
+                      border: const OutlineInputBorder(),
                       filled: true,
                       fillColor: Colors.grey[300],
                       hintText: 'Select Date',
@@ -116,32 +118,32 @@ class _KycInfoScreenState extends State<KycInfoScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               TextField(
                 enabled: false,
                 controller: TextEditingController(text: user?.phoneNumber ?? 'Not available'),
                 decoration: InputDecoration(
                   labelText: 'Mobile Number',
-                  border: OutlineInputBorder(),
+                  border: const OutlineInputBorder(),
                   filled: true,
                   fillColor: Colors.grey[300],
                 ),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               TextField(
                 controller: _emailController,
                 decoration: InputDecoration(
                   labelText: 'Email',
-                  border: OutlineInputBorder(),
+                  border: const OutlineInputBorder(),
                   filled: true,
                   fillColor: Colors.grey[300],
                 ),
                 keyboardType: TextInputType.emailAddress,
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: _proceed,
-                child: Text('Proceed'),
+                child: const Text('Proceed'),
               ),
             ],
           ),
